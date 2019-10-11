@@ -1,0 +1,31 @@
+[user]
+	email = karl.robert.nilsson@gmail.com
+	name = Karl Nilsson
+[push]
+	default = simple
+[core]
+	editor = vim
+	autocrlf = input
+[merge]
+	tool = vimdiff
+[color]
+	ui = true
+[fetch]
+    prune = true
+
+[alias]
+    a = add
+    ac = !git add . && git commit -am
+    ap = add -p
+    c = commit --verbose
+    cm = commit -m
+    cam = commit -am
+    co = checkout
+    cob = checkout -b
+    com = checkout master
+    cot = checkout -t
+    l = pull
+    # list aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+    p = push
+    s = status -s
