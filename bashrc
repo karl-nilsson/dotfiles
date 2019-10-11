@@ -1,6 +1,14 @@
 [[ $- != *i* ]] && return
 
+# aliases
 alias ls='ls --color=auto'
+alias ll='ls -lhAF --color=auto'
+alias free='free -mht'
+alias ps="ps auxf"
+alias tgz="tar -xzvf"
+alias v='vim'
+
+
 PS1='[\u@\h \w]\$ '
 
 # run ssh-agent once
@@ -31,6 +39,7 @@ function_exists() {
     return $?
 }
 
+# copy git aliases to bash as g$alias
 for al in `git --list-cmds=alias`; do
     alias g$al="git $al"
     
